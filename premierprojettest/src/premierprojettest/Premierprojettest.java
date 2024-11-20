@@ -17,4 +17,8 @@ public class Premierprojettest {
         // TODO code application logic here
     }
     
+    public void maMethode() {
+    
+    }
+    
 }
