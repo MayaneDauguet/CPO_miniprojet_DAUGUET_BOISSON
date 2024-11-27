@@ -20,7 +20,7 @@ public class Pion {
         return couleur;
     }
 
-    // Méthode toString pour une représentation textuelle
+    // Méthode toString pour une représentation textuelle (demandé dans l'énnoncé)
     @Override
     public String toString() {
         return Character.toString(couleur);

@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package mastermind_dauguet_boisson;
-
+import java.util.ArrayList;
 /**
  *
  * @author daugu
@@ -28,5 +28,6 @@ public class Mastermind_DAUGUET_BOISSON {
         System.out.println("Representation textuelle du pion bleu : " + pionBleu);   // Affiche 'B'
         System.out.println("Representation textuelle du pion vert : " + pionVert);   // Affiche 'V'
     }
+    
     
 }
