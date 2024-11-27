@@ -14,7 +14,19 @@ public class Mastermind_DAUGUET_BOISSON {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Pion pionRouge = new Pion('R'); // Pion rouge
+        Pion pionBleu = new Pion('B');  // Pion bleu
+        Pion pionVert = new Pion('V');  // Pion vert
+
+        // Test des accesseurs
+        System.out.println("Couleur du pion rouge : " + pionRouge.getCouleur()); // Affiche 'R'
+        System.out.println("Couleur du pion bleu : " + pionBleu.getCouleur());   // Affiche 'B'
+        System.out.println("Couleur du pion vert : " + pionVert.getCouleur());   // Affiche 'V'
+
+        // Test de la méthode toString
+        System.out.println("Representation textuelle du pion rouge : " + pionRouge); // Affiche 'R'
+        System.out.println("Representation textuelle du pion bleu : " + pionBleu);   // Affiche 'B'
+        System.out.println("Representation textuelle du pion vert : " + pionVert);   // Affiche 'V'
     }
     
 }
