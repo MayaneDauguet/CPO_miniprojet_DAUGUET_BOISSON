@@ -9,5 +9,20 @@ package mastermind_dauguet_boisson;
  * @author daugu
  */
 public class Pion {
-    
+    private char couleur; // Attribut pour représenter la couleur du pion
+
+    // Constructeur 
+    public Pion(char couleur) {
+        this.couleur = couleur;
+    }
+
+    public char getCouleur() {
+        return couleur;
+    }
+
+    // Méthode toString pour une représentation textuelle
+    @Override
+    public String toString() {
+        return Character.toString(couleur);
+    }
 }
