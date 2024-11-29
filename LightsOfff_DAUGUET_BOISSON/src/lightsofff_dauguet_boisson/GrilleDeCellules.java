@@ -36,6 +36,63 @@ public class GrilleDeCellules {
         }
     }
 
+    // Méthode pour activer toute une ligne
+    public void activerLigneDeCellules(int idLigne) {
+        if (idLigne >= 0 && idLigne < nbLignes) {
+            for (int j = 0; j < nbColonnes; j++) {
+                matriceCellules[idLigne][j].activerCellule();
+            }
+        }
+    }
+
+    // Méthode pour activer toute une colonne
+    public void activerColonneDeCellules(int idColonne) {
+        if (idColonne >= 0 && idColonne < nbColonnes) {
+            for (int i = 0; i < nbLignes; i++) {
+                matriceCellules[i][idColonne].activerCellule();
+            }
+        }
+    }
+
+    // Méthode pour activer la diagonale descendante
+    public void activerDiagonaleDescendante() {
+        for (int i = 0; i < Math.min(nbLignes, nbColonnes); i++) {
+            matriceCellules[i][i].activerCellule();
+        }
+    }
+
+    // Méthode pour activer la diagonale montante
+    public void activerDiagonaleMontante() {
+        for (int i = 0; i < Math.min(nbLignes, nbColonnes); i++) {
+            matriceCellules[i][nbColonnes - 1 - i].activerCellule();
+        }
+    }
+
+    // Méthode pour mélanger la grille aléatoirement
+    public void melangerMatriceAleatoirement(int nbTours) {
+        for (int i = 0; i < nbTours; i++) {
+            int choix = (int) (Math.random() * 4);
+            switch (choix) {
+                case 0 -> activerLigneDeCellules((int) (Math.random() * nbLignes));
+                case 1 -> activerColonneDeCellules((int) (Math.random() * nbColonnes));
+                case 2 -> activerDiagonaleDescendante();
+                case 3 -> activerDiagonaleMontante();
+            }
+        }
+    }
+
+    // Méthode pour vérifier si toutes les cellules sont éteintes
+    public boolean cellulesToutesEteintes() {
+        for (int i = 0; i < nbLignes; i++) {
+            for (int j = 0; j < nbColonnes; j++) {
+                if (!matriceCellules[i][j].estEteinte()) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     // Méthode toString pour afficher la grille
     @Override
     public String toString() {
