@@ -14,7 +14,13 @@ public class LightsOfff_DAUGUET_BOISSON {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        CelluleLumineuse cellule = new CelluleLumineuse();
+        System.out.println("État initial : " + cellule); // Affiche "O"
+        cellule.activerCellule();
+        System.out.println("Après activation : " + cellule); // Affiche "X"
+        cellule.eteindreCellule();
+        System.out.println("Après extinction : " + cellule); // Affiche "O"
+   
     }
-    
+   
 }
