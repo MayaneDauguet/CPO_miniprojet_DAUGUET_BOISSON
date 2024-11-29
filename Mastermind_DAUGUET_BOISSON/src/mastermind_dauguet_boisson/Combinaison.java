@@ -44,7 +44,6 @@ public class Combinaison {
             combinaisonAleatoire[i] = new Pion(couleurAleatoire);
         }
 
-        // Mettre à jour l'attribut 'elements' avec la nouvelle combinaison générée
-        this.elements = combinaisonAleatoire;
+        
     } 
 }
