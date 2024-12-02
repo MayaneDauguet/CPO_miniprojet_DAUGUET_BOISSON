@@ -12,7 +12,8 @@ import javax.swing.JButton;
  * @author daugu
  */
 public class FenetrePrincipale extends javax.swing.JFrame {
-
+    GrilleDeCellules grille;
+    int nbCoups; 
     /**
      * Creates new form FenetrePrincipale
      */
@@ -20,6 +21,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         initComponents();
         int nbLignes = 10;
         int nbColonnes = 10;
+        this.grille = new GrilleDeCellules(nbLignes, nbColonnes);
         PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
         for (int i=0; i < nbLignes; i++) {
         for (int j=0; j < nbColonnes; j++ ) {
@@ -27,8 +29,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         PanneauGrille.add(bouton_cellule); // ajout au Jpanel PanneauGrille
         }
     }
-
-    }
+    initialiserPartie();
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -61,6 +63,14 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    /**
+     *
+     */
+    public void initialiserPartie() {
+        grille.eteindreToutesLesCellules(); // Éteindre toutes les cellules
+        grille.melangerMatriceAleatoirement(5); // Mélanger la grille avec 5 tours par défaut
+        System.out.println("La partie est initialisée !");
+    }
 
     /**
      * @param args the command line arguments
