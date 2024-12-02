@@ -14,6 +14,8 @@ public class LightsOfff_DAUGUET_BOISSON {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        
         // 1. Test de la classe CelluleLumineuse
         System.out.println("Test de la classe CelluleLumineuse :");
         CelluleLumineuse cellule = new CelluleLumineuse();
