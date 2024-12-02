@@ -9,11 +9,15 @@ package lightsofff_dauguet_boisson;
  * @author Inès
  */
 public class GrilleDeCellules {
-    // Attributs
+    // Attributs    private CelluleLumineuse[][] matriceCellules;
+
     private CelluleLumineuse[][] matriceCellules;
     private int nbLignes;
     private int nbColonnes;
 
+    public CelluleLumineuse recupCelluleAvecCoords(int x, int y) {
+        return matriceCellules[x][y];
+    }
     // Constructeur
     public GrilleDeCellules(int p_nbLignes, int p_nbColonnes) {
         this.nbLignes = p_nbLignes;

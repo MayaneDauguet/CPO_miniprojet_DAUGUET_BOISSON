@@ -25,7 +25,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
         for (int i=0; i < nbLignes; i++) {
         for (int j=0; j < nbColonnes; j++ ) {
-        JButton bouton_cellule = new JButton(); // création d'un bouton
+        CelluleGraphique bouton_cellule = new CelluleGraphique( grille.recupCelluleAvecCoords(i,j), 36,36);
         PanneauGrille.add(bouton_cellule); // ajout au Jpanel PanneauGrille
         }
     }
