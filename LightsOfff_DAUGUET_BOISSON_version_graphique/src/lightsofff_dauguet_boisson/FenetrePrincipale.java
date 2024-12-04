@@ -85,70 +85,70 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 204));
 
-        btnLigne1.setText("btnLigne1");
+        btnLigne1.setText("L1");
         btnLigne1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne1ActionPerformed(evt);
             }
         });
 
-        btnLigne2.setText("btnLigne2");
+        btnLigne2.setText("L2");
         btnLigne2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne2ActionPerformed(evt);
             }
         });
 
-        btnLigne3.setText("btnLigne3");
+        btnLigne3.setText("L3");
         btnLigne3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne3ActionPerformed(evt);
             }
         });
 
-        btnLigne4.setText("btnLigne4");
+        btnLigne4.setText("L4");
         btnLigne4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne4ActionPerformed(evt);
             }
         });
 
-        btnLigne5.setText("btnLigne5");
+        btnLigne5.setText("L5");
         btnLigne5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne5ActionPerformed(evt);
             }
         });
 
-        btnLigne6.setText("btnLigne6");
+        btnLigne6.setText("L6");
         btnLigne6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne6ActionPerformed(evt);
             }
         });
 
-        btnLigne7.setText("btnLigne7");
+        btnLigne7.setText("L7");
         btnLigne7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne7ActionPerformed(evt);
             }
         });
 
-        btnLigne8.setText("btnLigne8");
+        btnLigne8.setText("L8");
         btnLigne8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne8ActionPerformed(evt);
             }
         });
 
-        btnLigne9.setText("btnLigne9");
+        btnLigne9.setText("L9");
         btnLigne9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne9ActionPerformed(evt);
             }
         });
 
-        btnLigne0.setText("btnLigne0");
+        btnLigne0.setText("L0");
         btnLigne0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne0ActionPerformed(evt);
@@ -172,7 +172,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                     .addComponent(btnLigne2)
                     .addComponent(btnLigne1)
                     .addComponent(btnLigne0))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

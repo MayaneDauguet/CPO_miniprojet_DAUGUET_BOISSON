@@ -79,7 +79,7 @@
                       <Component id="btnLigne1" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="btnLigne0" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="11" max="32767" attributes="0"/>
+                  <EmptySpace pref="22" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -114,7 +114,7 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="btnLigne1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="btnLigne1"/>
+            <Property name="text" type="java.lang.String" value="L1"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLigne1ActionPerformed"/>
@@ -122,7 +122,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLigne2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="btnLigne2"/>
+            <Property name="text" type="java.lang.String" value="L2"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLigne2ActionPerformed"/>
@@ -130,7 +130,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLigne3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="btnLigne3"/>
+            <Property name="text" type="java.lang.String" value="L3"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLigne3ActionPerformed"/>
@@ -138,7 +138,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLigne4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="btnLigne4"/>
+            <Property name="text" type="java.lang.String" value="L4"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLigne4ActionPerformed"/>
@@ -146,7 +146,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLigne5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="btnLigne5"/>
+            <Property name="text" type="java.lang.String" value="L5"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLigne5ActionPerformed"/>
@@ -154,7 +154,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLigne6">
           <Properties>
-            <Property name="text" type="java.lang.String" value="btnLigne6"/>
+            <Property name="text" type="java.lang.String" value="L6"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLigne6ActionPerformed"/>
@@ -162,7 +162,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLigne7">
           <Properties>
-            <Property name="text" type="java.lang.String" value="btnLigne7"/>
+            <Property name="text" type="java.lang.String" value="L7"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLigne7ActionPerformed"/>
@@ -170,7 +170,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLigne8">
           <Properties>
-            <Property name="text" type="java.lang.String" value="btnLigne8"/>
+            <Property name="text" type="java.lang.String" value="L8"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLigne8ActionPerformed"/>
@@ -178,7 +178,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLigne9">
           <Properties>
-            <Property name="text" type="java.lang.String" value="btnLigne9"/>
+            <Property name="text" type="java.lang.String" value="L9"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLigne9ActionPerformed"/>
@@ -186,7 +186,7 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnLigne0">
           <Properties>
-            <Property name="text" type="java.lang.String" value="btnLigne0"/>
+            <Property name="text" type="java.lang.String" value="L0"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLigne0ActionPerformed"/>
