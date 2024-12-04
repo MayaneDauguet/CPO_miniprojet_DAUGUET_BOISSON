@@ -49,30 +49,26 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         PanneauGrille.setBackground(new java.awt.Color(255, 204, 255));
 
+        javax.swing.GroupLayout PanneauGrilleLayout = new javax.swing.GroupLayout(PanneauGrille);
+        PanneauGrille.setLayout(PanneauGrilleLayout);
+        PanneauGrilleLayout.setHorizontalGroup(
+            PanneauGrilleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        PanneauGrilleLayout.setVerticalGroup(
+            PanneauGrilleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 400, 400));
+
         btnLigne0.setText("btnLigne0");
         btnLigne0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLigne0ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout PanneauGrilleLayout = new javax.swing.GroupLayout(PanneauGrille);
-        PanneauGrille.setLayout(PanneauGrilleLayout);
-        PanneauGrilleLayout.setHorizontalGroup(
-            PanneauGrilleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanneauGrilleLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnLigne0)
-                .addContainerGap(311, Short.MAX_VALUE))
-        );
-        PanneauGrilleLayout.setVerticalGroup(
-            PanneauGrilleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanneauGrilleLayout.createSequentialGroup()
-                .addComponent(btnLigne0)
-                .addGap(0, 377, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 400, 400));
+        getContentPane().add(btnLigne0, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
