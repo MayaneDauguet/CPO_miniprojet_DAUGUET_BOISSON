@@ -55,6 +55,15 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         btnLigne0 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         btnColonne0 = new javax.swing.JButton();
+        btnColonne1 = new javax.swing.JButton();
+        btnColonne2 = new javax.swing.JButton();
+        btnColonne3 = new javax.swing.JButton();
+        btnColonne4 = new javax.swing.JButton();
+        btnColonne6 = new javax.swing.JButton();
+        btnColonne7 = new javax.swing.JButton();
+        btnColonne5 = new javax.swing.JButton();
+        btnColonne8 = new javax.swing.JButton();
+        btnColonne9 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -202,21 +211,123 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             }
         });
 
+        btnColonne1.setText("btnColonne1");
+        btnColonne1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne1ActionPerformed(evt);
+            }
+        });
+
+        btnColonne2.setText("btnColonne2");
+        btnColonne2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne2ActionPerformed(evt);
+            }
+        });
+
+        btnColonne3.setText("btnColonne3");
+        btnColonne3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne3ActionPerformed(evt);
+            }
+        });
+
+        btnColonne4.setText("btnColonne4");
+        btnColonne4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne4ActionPerformed(evt);
+            }
+        });
+
+        btnColonne6.setText("btnColonne6");
+        btnColonne6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne6ActionPerformed(evt);
+            }
+        });
+
+        btnColonne7.setText("btnColonne7");
+        btnColonne7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne7ActionPerformed(evt);
+            }
+        });
+
+        btnColonne5.setText("btnColonne5");
+        btnColonne5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne5ActionPerformed(evt);
+            }
+        });
+
+        btnColonne8.setText("btnColonne8");
+        btnColonne8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne8ActionPerformed(evt);
+            }
+        });
+
+        btnColonne9.setText("btnColonne9");
+        btnColonne9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnColonne9ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(btnColonne1)
+                .addGap(46, 46, 46)
+                .addComponent(btnColonne4)
+                .addGap(56, 56, 56)
+                .addComponent(btnColonne7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(btnColonne2)
+                .addGap(48, 48, 48)
+                .addComponent(btnColonne5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnColonne8)
+                .addGap(34, 34, 34))
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnColonne0)
-                .addContainerGap(396, Short.MAX_VALUE))
+                .addGap(43, 43, 43)
+                .addComponent(btnColonne3)
+                .addGap(44, 44, 44)
+                .addComponent(btnColonne6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addComponent(btnColonne9))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(btnColonne0)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(btnColonne0))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnColonne3)
+                            .addComponent(btnColonne6)
+                            .addComponent(btnColonne9))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnColonne1)
+                    .addComponent(btnColonne4)
+                    .addComponent(btnColonne7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnColonne2)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnColonne5)
+                        .addComponent(btnColonne8))))
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 500, -1));
@@ -289,6 +400,60 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         this.grille.activerColonneDeCellules(0);
         repaint();
     }//GEN-LAST:event_btnColonne0ActionPerformed
+
+    private void btnColonne3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne3ActionPerformed
+        // TODO add your handling code here:
+        this.grille.activerColonneDeCellules(3);
+        repaint();
+    }//GEN-LAST:event_btnColonne3ActionPerformed
+
+    private void btnColonne1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne1ActionPerformed
+        // TODO add your handling code here:
+        this.grille.activerColonneDeCellules(1);
+        repaint();
+    }//GEN-LAST:event_btnColonne1ActionPerformed
+
+    private void btnColonne2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne2ActionPerformed
+        // TODO add your handling code here:
+        this.grille.activerColonneDeCellules(2);
+        repaint();
+    }//GEN-LAST:event_btnColonne2ActionPerformed
+
+    private void btnColonne4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne4ActionPerformed
+        // TODO add your handling code here:
+        this.grille.activerColonneDeCellules(4);
+        repaint();
+    }//GEN-LAST:event_btnColonne4ActionPerformed
+
+    private void btnColonne5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne5ActionPerformed
+        // TODO add your handling code here:
+        this.grille.activerColonneDeCellules(5);
+        repaint();
+    }//GEN-LAST:event_btnColonne5ActionPerformed
+
+    private void btnColonne6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne6ActionPerformed
+        // TODO add your handling code here:
+        this.grille.activerColonneDeCellules(6);
+        repaint();
+    }//GEN-LAST:event_btnColonne6ActionPerformed
+
+    private void btnColonne7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne7ActionPerformed
+        // TODO add your handling code here:
+        this.grille.activerColonneDeCellules(7);
+        repaint();
+    }//GEN-LAST:event_btnColonne7ActionPerformed
+
+    private void btnColonne8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne8ActionPerformed
+        // TODO add your handling code here:
+        this.grille.activerColonneDeCellules(8);
+        repaint();
+    }//GEN-LAST:event_btnColonne8ActionPerformed
+
+    private void btnColonne9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne9ActionPerformed
+        // TODO add your handling code here:
+        this.grille.activerColonneDeCellules(9);
+        repaint();
+    }//GEN-LAST:event_btnColonne9ActionPerformed
     
     
     /**
@@ -338,6 +503,15 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanneauGrille;
     private javax.swing.JButton btnColonne0;
+    private javax.swing.JButton btnColonne1;
+    private javax.swing.JButton btnColonne2;
+    private javax.swing.JButton btnColonne3;
+    private javax.swing.JButton btnColonne4;
+    private javax.swing.JButton btnColonne5;
+    private javax.swing.JButton btnColonne6;
+    private javax.swing.JButton btnColonne7;
+    private javax.swing.JButton btnColonne8;
+    private javax.swing.JButton btnColonne9;
     private javax.swing.JButton btnLigne0;
     private javax.swing.JButton btnLigne1;
     private javax.swing.JButton btnLigne2;
