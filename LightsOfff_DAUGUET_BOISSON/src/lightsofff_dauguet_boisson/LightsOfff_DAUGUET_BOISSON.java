@@ -28,7 +28,7 @@ public class LightsOfff_DAUGUET_BOISSON {
 
         // 2. Test de la classe GrilleDeCellules
         System.out.println("Test de la classe GrilleDeCellules :");
-        GrilleDeCellules grille = new GrilleDeCellules(5, 5);  // Grille 5x5
+        GrilleDeCellules grille = new GrilleDeCellules(10, 10);  // Grille 10x10
         System.out.println("Grille initiale :");
         System.out.println(grille);  // Grille avec toutes les cellules éteintes
 
@@ -53,7 +53,7 @@ public class LightsOfff_DAUGUET_BOISSON {
 
         // 3. Test de la classe Partie
         System.out.println("Test de la classe Partie :");
-        Partie partie = new Partie(5, 5);  // Partie avec une grille 5x5
+        Partie partie = new Partie(10, 10);  // Partie avec une grille 10x10
         partie.initialiserPartie();  // Initialisation de la partie (mélange)
         partie.lancerPartie();  // Lancement de la partie
     }
