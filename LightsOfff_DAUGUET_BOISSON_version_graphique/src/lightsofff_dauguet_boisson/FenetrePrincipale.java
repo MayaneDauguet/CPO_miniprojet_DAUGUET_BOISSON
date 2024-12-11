@@ -457,7 +457,6 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.grille.activerLigneDeCellules(0);
         repaint();
-
     }//GEN-LAST:event_btnLigne0ActionPerformed
 
     private void btnLigne2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne2ActionPerformed
