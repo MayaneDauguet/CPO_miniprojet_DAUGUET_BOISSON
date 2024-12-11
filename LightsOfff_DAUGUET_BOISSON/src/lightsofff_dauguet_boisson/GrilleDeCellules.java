@@ -126,4 +126,5 @@ public class GrilleDeCellules {
     public CelluleLumineuse[][] getMatriceCellules() {
         return matriceCellules;
     }
+   
 }
