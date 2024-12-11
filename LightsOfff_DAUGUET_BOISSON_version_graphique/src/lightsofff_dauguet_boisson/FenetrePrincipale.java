@@ -18,18 +18,18 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     /**
      * Creates new form FenetrePrincipale
      */
-    public FenetrePrincipale() {
-        initComponents();
-        int nbLignes = 10;
-        int nbColonnes = 10;
-        this.grille = new GrilleDeCellules(nbLignes, nbColonnes);
-        PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
-        for (int i=0; i < nbLignes; i++) {
-        for (int j=0; j < nbColonnes; j++ ) {
-        CelluleGraphique bouton_cellule = new CelluleGraphique( grille.recupCelluleAvecCoords(i,j), 36,36);
-        PanneauGrille.add(bouton_cellule); // ajout au Jpanel PanneauGrille
-        }
+public FenetrePrincipale() {
+    initComponents();
+    int nbLignes = 10;
+    int nbColonnes = 10;
+    this.grille = new GrilleDeCellules(nbLignes, nbColonnes);
+    PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
+    for (int i=0; i < nbLignes; i++) {
+    for (int j=0; j < nbColonnes; j++ ) {
+    CelluleGraphique bouton_cellule = new CelluleGraphique( grille.recupCelluleAvecCoords(i,j), 36,36);
+    PanneauGrille.add(bouton_cellule); // ajout au Jpanel PanneauGrille
     }
+}
     initialiserPartie();
 }
 
