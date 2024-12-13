@@ -14,7 +14,7 @@ public class CelluleLumineuse {
 
     // Constructeur par défaut
     public CelluleLumineuse() {
-        this.etat = false; // Par défaut, la cellule est éteinte
+        this.etat = false; // Par défaut, la cellule est éteinte (false)
     }
 
     // Méthode pour activer (inverser l'état de la cellule)
@@ -40,6 +40,6 @@ public class CelluleLumineuse {
     // Méthode toString pour afficher la cellule
     @Override
     public String toString() {
-        return this.etat ? "X" : "O"; // "X" si allumée, "O" si éteinte
+        return this.etat ? "O" : "X"; // "X" si éteinte, "O" si allumée
     }
 }
