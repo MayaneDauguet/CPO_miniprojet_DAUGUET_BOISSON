@@ -4,14 +4,10 @@
  */
 package lightsofff_dauguet_boisson;
 
-import java.awt.BorderLayout;
-import java.awt.Font;
+
 import java.awt.GridLayout;
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
 
 /**
  *
@@ -20,7 +16,6 @@ import javax.swing.SwingUtilities;
 public class FenetrePrincipale extends javax.swing.JFrame {
 
     GrilleDeCellules grille;
-    int nbCoups;
 
     /**
      * Creates new form FenetrePrincipale
@@ -290,11 +285,16 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     }
     
     
-    private void verifierVictoire() {
+    public void verifierVictoire() {
     if (grille.cellulesToutesEteintes()) {
-        
+        JOptionPane.showMessageDialog(this, 
+            "Bravo vous avez gagné ", 
+            "Victoire", 
+            JOptionPane.INFORMATION_MESSAGE);
+        initialiserPartie();
     }
 }
+
 
     /**
      * @param args the command line arguments
