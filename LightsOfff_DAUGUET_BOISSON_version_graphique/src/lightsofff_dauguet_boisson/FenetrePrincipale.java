@@ -22,23 +22,22 @@ public class FenetrePrincipale extends javax.swing.JFrame {
      */
     public FenetrePrincipale() {
         initComponents();
-        int nbLignes = 10;
-        int nbColonnes = 10;
-        this.grille = new GrilleDeCellules(nbLignes, nbColonnes);
+        int TailleGrille = 10;
+        this.grille = new GrilleDeCellules(TailleGrille, TailleGrille);
         
        //  setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
          //   getContentPane().add(PanneauBoutonsVerticaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1 * 40, nbLignes * 40));
            
-        PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
-        for (int i = 0; i < nbLignes; i++) {
-            for (int j = 0; j < nbColonnes; j++) {
+        PanneauGrille.setLayout(new GridLayout(TailleGrille, TailleGrille));
+        for (int i = 0; i < TailleGrille; i++) {
+            for (int j = 0; j < TailleGrille; j++) {
                 CelluleGraphique bouton_cellule = new CelluleGraphique(grille.recupCelluleAvecCoords(i, j), 36, 36);
                 PanneauGrille.add(bouton_cellule); // ajout au Jpanel PanneauGrille
             }
         }
         // Configuration du panneau de boutons verticaux
-            PanneauBoutonsVerticaux.setLayout(new GridLayout(nbLignes, 1));
-            for (int a = 0; a < nbLignes; a++) {
+            PanneauBoutonsVerticaux.setLayout(new GridLayout(TailleGrille, 1));
+            for (int a = 0; a < TailleGrille; a++) {
                 JButton bouton_ligne = new JButton("Ligne " + (a + 1));
                 int ligne = a; // Variable nécessaire pour le listener
                 bouton_ligne.addActionListener(e -> {
@@ -49,8 +48,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 PanneauBoutonsVerticaux.add(bouton_ligne); // Ajout du bouton au panneau
             }
             PanneauBoutonsVerticaux.repaint();
-            PanneauBoutonsHorizontaux.setLayout(new GridLayout(1, nbColonnes));
-            for (int b = 0; b < nbColonnes; b++) {
+            PanneauBoutonsHorizontaux.setLayout(new GridLayout(1, TailleGrille));
+            for (int b = 0; b < TailleGrille; b++) {
                 JButton bouton_colonne = new JButton("Colonne " + (b + 1));
                 int colonne = b; // Variable nécessaire pour le listener
                 bouton_colonne.addActionListener(e -> {
