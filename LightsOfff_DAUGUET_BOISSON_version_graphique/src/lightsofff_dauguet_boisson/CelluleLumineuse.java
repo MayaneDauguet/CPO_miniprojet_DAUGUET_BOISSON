@@ -38,8 +38,5 @@ public class CelluleLumineuse {
     }
 
     // Méthode toString pour afficher la cellule
-    @Override
-    public String toString() {
-        return this.etat ? "O" : "X"; // "X" si éteinte, "O" si allumée
-    }
+    
 }
