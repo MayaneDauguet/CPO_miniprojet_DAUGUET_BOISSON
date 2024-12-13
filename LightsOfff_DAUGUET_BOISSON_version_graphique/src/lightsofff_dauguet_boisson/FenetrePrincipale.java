@@ -48,8 +48,20 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 PanneauBoutonsVerticaux.add(bouton_ligne); // Ajout du bouton au panneau
             }
             PanneauBoutonsVerticaux.repaint();
+            PanneauBoutonsHorizontaux.setLayout(new GridLayout(1, nbColonnes));
+            for (int b = 0; b < nbColonnes; b++) {
+                JButton bouton_colonne = new JButton("Colonne " + (b + 1));
+                int colonne = b; // Variable nécessaire pour le listener
+                bouton_colonne.addActionListener(e -> {
+                    grille.activerColonneDeCellules(colonne); // Active une colonne de cellules
+                    repaint(); // Met à jour l'affichage
+                });
+                PanneauBoutonsHorizontaux.add(bouton_colonne); // Ajout du bouton au panneau
+            }
+            PanneauBoutonsHorizontaux.repaint();
             this.pack();
             this.revalidate();
+            
         initialiserPartie();
     }
 
@@ -70,17 +82,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         btnDiagonale1 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        btnColonne0 = new javax.swing.JButton();
-        btnColonne1 = new javax.swing.JButton();
-        btnColonne2 = new javax.swing.JButton();
-        btnColonne3 = new javax.swing.JButton();
-        btnColonne4 = new javax.swing.JButton();
-        btnColonne6 = new javax.swing.JButton();
-        btnColonne7 = new javax.swing.JButton();
-        btnColonne5 = new javax.swing.JButton();
-        btnColonne8 = new javax.swing.JButton();
-        btnColonne9 = new javax.swing.JButton();
+        PanneauBoutonsHorizontaux = new javax.swing.JPanel();
         PanneauBoutonsVerticaux = new javax.swing.JPanel();
         PanneauGrille = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
@@ -174,124 +176,20 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         jPanel4.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jPanel2.setBackground(new java.awt.Color(0, 51, 204));
+        PanneauBoutonsHorizontaux.setBackground(new java.awt.Color(0, 51, 204));
 
-        btnColonne0.setText("C0");
-        btnColonne0.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne0ActionPerformed(evt);
-            }
-        });
-
-        btnColonne1.setText("C1");
-        btnColonne1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne1ActionPerformed(evt);
-            }
-        });
-
-        btnColonne2.setText("C2");
-        btnColonne2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne2ActionPerformed(evt);
-            }
-        });
-
-        btnColonne3.setText("C3");
-        btnColonne3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne3ActionPerformed(evt);
-            }
-        });
-
-        btnColonne4.setText("C4");
-        btnColonne4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne4ActionPerformed(evt);
-            }
-        });
-
-        btnColonne6.setText("C6");
-        btnColonne6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne6ActionPerformed(evt);
-            }
-        });
-
-        btnColonne7.setText("C7");
-        btnColonne7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne7ActionPerformed(evt);
-            }
-        });
-
-        btnColonne5.setText("C5");
-        btnColonne5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne5ActionPerformed(evt);
-            }
-        });
-
-        btnColonne8.setText("C8");
-        btnColonne8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne8ActionPerformed(evt);
-            }
-        });
-
-        btnColonne9.setText("C9");
-        btnColonne9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnColonne9ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(2, 2, 2)
-                .addComponent(btnColonne0, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(btnColonne1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnColonne2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(btnColonne3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addComponent(btnColonne4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnColonne5, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnColonne6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnColonne7, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnColonne8, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnColonne9, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+        javax.swing.GroupLayout PanneauBoutonsHorizontauxLayout = new javax.swing.GroupLayout(PanneauBoutonsHorizontaux);
+        PanneauBoutonsHorizontaux.setLayout(PanneauBoutonsHorizontauxLayout);
+        PanneauBoutonsHorizontauxLayout.setHorizontalGroup(
+            PanneauBoutonsHorizontauxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnColonne0)
-                    .addComponent(btnColonne2)
-                    .addComponent(btnColonne1)
-                    .addComponent(btnColonne3)
-                    .addComponent(btnColonne4)
-                    .addComponent(btnColonne5)
-                    .addComponent(btnColonne6)
-                    .addComponent(btnColonne7)
-                    .addComponent(btnColonne8)
-                    .addComponent(btnColonne9))
-                .addContainerGap())
+        PanneauBoutonsHorizontauxLayout.setVerticalGroup(
+            PanneauBoutonsHorizontauxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
         );
 
-        jPanel4.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 600, 60));
+        jPanel4.add(PanneauBoutonsHorizontaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 600, 60));
 
         PanneauBoutonsVerticaux.setBackground(new java.awt.Color(0, 0, 204));
         PanneauBoutonsVerticaux.setPreferredSize(new java.awt.Dimension(100, 600));
@@ -357,120 +255,24 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnColonne0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne0ActionPerformed
-        this.grille.activerColonneDeCellules(0);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnColonne0ActionPerformed
-
-    private void btnColonne3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne3ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerColonneDeCellules(3);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnColonne3ActionPerformed
-
-    private void btnColonne1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne1ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerColonneDeCellules(1);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnColonne1ActionPerformed
-
-    private void btnColonne2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne2ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerColonneDeCellules(2);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnColonne2ActionPerformed
-
-    private void btnColonne4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne4ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerColonneDeCellules(4);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnColonne4ActionPerformed
-
-    private void btnColonne5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne5ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerColonneDeCellules(5);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnColonne5ActionPerformed
-
-    private void btnColonne6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne6ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerColonneDeCellules(6);
-        repaint();
-    }//GEN-LAST:event_btnColonne6ActionPerformed
-
-    private void btnColonne7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne7ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerColonneDeCellules(7);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnColonne7ActionPerformed
-
-    private void btnColonne8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne8ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerColonneDeCellules(8);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnColonne8ActionPerformed
-
-    private void btnColonne9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne9ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerColonneDeCellules(9);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnColonne9ActionPerformed
-
     private void btnDiagonale1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiagonale1ActionPerformed
         // TODO add your handling code here:
         this.grille.activerDiagonaleDescendante();
         repaint();
-        verifierVictoire();
     }//GEN-LAST:event_btnDiagonale1ActionPerformed
 
     private void btnDiagonale2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiagonale2ActionPerformed
         // TODO add your handling code here:
         this.grille.activerDiagonaleMontante();
         repaint();
-        verifierVictoire();
     }//GEN-LAST:event_btnDiagonale2ActionPerformed
 
     /**
      *
      */
-    private void verifierVictoire() {
-        // Vérifie si toutes les cellules de la grille sont éteintes
-        if (grille.cellulesToutesEteintes()) {
-            // Affiche un message de victoire
-            System.out.println("Victoire ! Toutes les cellules sont éteintes.");
+    
 
-            // Désactive tous les boutons de la grille pour éviter d'autres actions
-            desactiverBoutons();
-            SwingUtilities.invokeLater(new Runnable() {
-                public void run() {
-                    repaint();
-                }
-            });
-        }
-    }
-
-    private void desactiverBoutons() {
-        btnColonne0.setEnabled(false);
-        btnColonne1.setEnabled(false);
-        btnColonne2.setEnabled(false);
-        btnColonne4.setEnabled(false);
-        btnColonne5.setEnabled(false);
-        btnColonne6.setEnabled(false);
-        btnColonne7.setEnabled(false);
-        btnColonne8.setEnabled(false);
-        btnColonne9.setEnabled(false);
-        btnDiagonale1.setEnabled(false);
-        btnDiagonale2.setEnabled(false);
-    }
+    
 
     public void initialiserPartie() {
         grille.eteindreToutesLesCellules(); // Éteindre toutes les cellules
@@ -514,22 +316,12 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PanneauBoutonsHorizontaux;
     private javax.swing.JPanel PanneauBoutonsVerticaux;
     private javax.swing.JPanel PanneauGrille;
-    private javax.swing.JButton btnColonne0;
-    private javax.swing.JButton btnColonne1;
-    private javax.swing.JButton btnColonne2;
-    private javax.swing.JButton btnColonne3;
-    private javax.swing.JButton btnColonne4;
-    private javax.swing.JButton btnColonne5;
-    private javax.swing.JButton btnColonne6;
-    private javax.swing.JButton btnColonne7;
-    private javax.swing.JButton btnColonne8;
-    private javax.swing.JButton btnColonne9;
     private javax.swing.JButton btnDiagonale1;
     private javax.swing.JButton btnDiagonale2;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
