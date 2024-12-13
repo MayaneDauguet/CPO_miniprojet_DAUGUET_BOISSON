@@ -13,25 +13,45 @@ import javax.swing.SwingUtilities;
  * @author daugu
  */
 public class FenetrePrincipale extends javax.swing.JFrame {
+
     GrilleDeCellules grille;
-    int nbCoups; 
+    int nbCoups;
+
     /**
      * Creates new form FenetrePrincipale
      */
-public FenetrePrincipale() {
-    initComponents();
-    int nbLignes = 10;
-    int nbColonnes = 10;
-    this.grille = new GrilleDeCellules(nbLignes, nbColonnes);
-    PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
-    for (int i=0; i < nbLignes; i++) {
-    for (int j=0; j < nbColonnes; j++ ) {
-    CelluleGraphique bouton_cellule = new CelluleGraphique( grille.recupCelluleAvecCoords(i,j), 36,36);
-    PanneauGrille.add(bouton_cellule); // ajout au Jpanel PanneauGrille
+    public FenetrePrincipale() {
+        initComponents();
+        int nbLignes = 10;
+        int nbColonnes = 10;
+        this.grille = new GrilleDeCellules(nbLignes, nbColonnes);
+        
+       //  setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+         //   getContentPane().add(PanneauBoutonsVerticaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1 * 40, nbLignes * 40));
+           
+        PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
+        for (int i = 0; i < nbLignes; i++) {
+            for (int j = 0; j < nbColonnes; j++) {
+                CelluleGraphique bouton_cellule = new CelluleGraphique(grille.recupCelluleAvecCoords(i, j), 36, 36);
+                PanneauGrille.add(bouton_cellule); // ajout au Jpanel PanneauGrille
+            }
+        }
+        // Configuration du panneau de boutons verticaux
+            PanneauBoutonsVerticaux.setLayout(new GridLayout(nbLignes, 1));
+            for (int a = 0; a < nbLignes; a++) {
+                JButton bouton_ligne = new JButton("Ligne " + (a + 1));
+                int ligne = a; // Variable nécessaire pour le listener
+                bouton_ligne.addActionListener(e -> {
+                    grille.activerLigneDeCellules(ligne); // Active une ligne de cellules
+                    repaint(); // Met à jour l'affichage
+                });
+                PanneauBoutonsVerticaux.add(bouton_ligne); // Ajout du bouton au panneau
+            }
+            PanneauBoutonsVerticaux.repaint();
+            this.pack();
+            this.revalidate();
+        initialiserPartie();
     }
-}
-    initialiserPartie();
-}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -61,17 +81,7 @@ public FenetrePrincipale() {
         btnColonne5 = new javax.swing.JButton();
         btnColonne8 = new javax.swing.JButton();
         btnColonne9 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        btnLigne1 = new javax.swing.JButton();
-        btnLigne2 = new javax.swing.JButton();
-        btnLigne3 = new javax.swing.JButton();
-        btnLigne4 = new javax.swing.JButton();
-        btnLigne5 = new javax.swing.JButton();
-        btnLigne6 = new javax.swing.JButton();
-        btnLigne7 = new javax.swing.JButton();
-        btnLigne8 = new javax.swing.JButton();
-        btnLigne9 = new javax.swing.JButton();
-        btnLigne0 = new javax.swing.JButton();
+        PanneauBoutonsVerticaux = new javax.swing.JPanel();
         PanneauGrille = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         btnDiagonale2 = new javax.swing.JButton();
@@ -283,128 +293,21 @@ public FenetrePrincipale() {
 
         jPanel4.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 600, 60));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 204));
-        jPanel1.setPreferredSize(new java.awt.Dimension(100, 600));
+        PanneauBoutonsVerticaux.setBackground(new java.awt.Color(0, 0, 204));
+        PanneauBoutonsVerticaux.setPreferredSize(new java.awt.Dimension(100, 600));
 
-        btnLigne1.setText("L1");
-        btnLigne1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne1ActionPerformed(evt);
-            }
-        });
-
-        btnLigne2.setText("L2");
-        btnLigne2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne2ActionPerformed(evt);
-            }
-        });
-
-        btnLigne3.setText("L3");
-        btnLigne3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne3ActionPerformed(evt);
-            }
-        });
-
-        btnLigne4.setText("L4");
-        btnLigne4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne4ActionPerformed(evt);
-            }
-        });
-
-        btnLigne5.setText("L5");
-        btnLigne5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne5ActionPerformed(evt);
-            }
-        });
-
-        btnLigne6.setText("L6");
-        btnLigne6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne6ActionPerformed(evt);
-            }
-        });
-
-        btnLigne7.setText("L7");
-        btnLigne7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne7ActionPerformed(evt);
-            }
-        });
-
-        btnLigne8.setText("L8");
-        btnLigne8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne8ActionPerformed(evt);
-            }
-        });
-
-        btnLigne9.setText("L9");
-        btnLigne9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne9ActionPerformed(evt);
-            }
-        });
-
-        btnLigne0.setText("L0");
-        btnLigne0.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLigne0ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnLigne9)
-                    .addComponent(btnLigne8)
-                    .addComponent(btnLigne7)
-                    .addComponent(btnLigne0)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnLigne3)
-                            .addComponent(btnLigne2)
-                            .addComponent(btnLigne4)
-                            .addComponent(btnLigne5)
-                            .addComponent(btnLigne6)))
-                    .addComponent(btnLigne1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        javax.swing.GroupLayout PanneauBoutonsVerticauxLayout = new javax.swing.GroupLayout(PanneauBoutonsVerticaux);
+        PanneauBoutonsVerticaux.setLayout(PanneauBoutonsVerticauxLayout);
+        PanneauBoutonsVerticauxLayout.setHorizontalGroup(
+            PanneauBoutonsVerticauxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(btnLigne0)
-                .addGap(33, 33, 33)
-                .addComponent(btnLigne1)
-                .addGap(18, 18, 18)
-                .addComponent(btnLigne2)
-                .addGap(28, 28, 28)
-                .addComponent(btnLigne3)
-                .addGap(36, 36, 36)
-                .addComponent(btnLigne4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                .addComponent(btnLigne5)
-                .addGap(42, 42, 42)
-                .addComponent(btnLigne6)
-                .addGap(43, 43, 43)
-                .addComponent(btnLigne7)
-                .addGap(37, 37, 37)
-                .addComponent(btnLigne8)
-                .addGap(33, 33, 33)
-                .addComponent(btnLigne9)
-                .addGap(30, 30, 30))
+        PanneauBoutonsVerticauxLayout.setVerticalGroup(
+            PanneauBoutonsVerticauxLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
 
-        jPanel4.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 80, 600));
+        jPanel4.add(PanneauBoutonsVerticaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 80, 600));
 
         PanneauGrille.setBackground(new java.awt.Color(255, 204, 255));
 
@@ -453,76 +356,6 @@ public FenetrePrincipale() {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnLigne0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne0ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerLigneDeCellules(0);
-        verifierVictoire();
-        repaint();
-    }//GEN-LAST:event_btnLigne0ActionPerformed
-
-    private void btnLigne2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne2ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerLigneDeCellules(2);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnLigne2ActionPerformed
-
-    private void btnLigne5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne5ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerLigneDeCellules(5);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnLigne5ActionPerformed
-
-    private void btnLigne1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne1ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerLigneDeCellules(1);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnLigne1ActionPerformed
-
-    private void btnLigne3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne3ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerLigneDeCellules(3);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnLigne3ActionPerformed
-
-    private void btnLigne4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne4ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerLigneDeCellules(4);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnLigne4ActionPerformed
-
-    private void btnLigne6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne6ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerLigneDeCellules(6);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnLigne6ActionPerformed
-
-    private void btnLigne7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne7ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerLigneDeCellules(7);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnLigne7ActionPerformed
-
-    private void btnLigne8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne8ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerLigneDeCellules(8);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnLigne8ActionPerformed
-
-    private void btnLigne9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLigne9ActionPerformed
-        // TODO add your handling code here:
-        this.grille.activerLigneDeCellules(9);
-        repaint();
-        verifierVictoire();
-    }//GEN-LAST:event_btnLigne9ActionPerformed
 
     private void btnColonne0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnColonne0ActionPerformed
         this.grille.activerColonneDeCellules(0);
@@ -605,25 +438,24 @@ public FenetrePrincipale() {
         repaint();
         verifierVictoire();
     }//GEN-LAST:event_btnDiagonale2ActionPerformed
-    
-    
+
     /**
      *
      */
     private void verifierVictoire() {
-    // Vérifie si toutes les cellules de la grille sont éteintes
-    if (grille.cellulesToutesEteintes()) {
-        // Affiche un message de victoire
-        System.out.println("Victoire ! Toutes les cellules sont éteintes.");
+        // Vérifie si toutes les cellules de la grille sont éteintes
+        if (grille.cellulesToutesEteintes()) {
+            // Affiche un message de victoire
+            System.out.println("Victoire ! Toutes les cellules sont éteintes.");
 
-        // Désactive tous les boutons de la grille pour éviter d'autres actions
-        desactiverBoutons();
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                repaint();
-            }
-        });
-    }
+            // Désactive tous les boutons de la grille pour éviter d'autres actions
+            desactiverBoutons();
+            SwingUtilities.invokeLater(new Runnable() {
+                public void run() {
+                    repaint();
+                }
+            });
+        }
     }
 
     private void desactiverBoutons() {
@@ -636,19 +468,10 @@ public FenetrePrincipale() {
         btnColonne7.setEnabled(false);
         btnColonne8.setEnabled(false);
         btnColonne9.setEnabled(false);
-        btnLigne0.setEnabled(false);
-        btnLigne1.setEnabled(false);
-        btnLigne2.setEnabled(false);
-        btnLigne3.setEnabled(false);
-        btnLigne4.setEnabled(false);
-        btnLigne5.setEnabled(false);
-        btnLigne6.setEnabled(false);
-        btnLigne7.setEnabled(false); 
-        btnLigne8.setEnabled(false);
-        btnLigne9.setEnabled(false);
-        btnDiagonale1.setEnabled(false); 
-        btnDiagonale2.setEnabled(false);        
-}
+        btnDiagonale1.setEnabled(false);
+        btnDiagonale2.setEnabled(false);
+    }
+
     public void initialiserPartie() {
         grille.eteindreToutesLesCellules(); // Éteindre toutes les cellules
         grille.melangerMatriceAleatoirement(5); // Mélanger la grille avec 5 tours par défaut
@@ -691,6 +514,7 @@ public FenetrePrincipale() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel PanneauBoutonsVerticaux;
     private javax.swing.JPanel PanneauGrille;
     private javax.swing.JButton btnColonne0;
     private javax.swing.JButton btnColonne1;
@@ -704,17 +528,6 @@ public FenetrePrincipale() {
     private javax.swing.JButton btnColonne9;
     private javax.swing.JButton btnDiagonale1;
     private javax.swing.JButton btnDiagonale2;
-    private javax.swing.JButton btnLigne0;
-    private javax.swing.JButton btnLigne1;
-    private javax.swing.JButton btnLigne2;
-    private javax.swing.JButton btnLigne3;
-    private javax.swing.JButton btnLigne4;
-    private javax.swing.JButton btnLigne5;
-    private javax.swing.JButton btnLigne6;
-    private javax.swing.JButton btnLigne7;
-    private javax.swing.JButton btnLigne8;
-    private javax.swing.JButton btnLigne9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
