@@ -88,9 +88,9 @@ public class GrilleDeCellules {
     // Méthode pour vérifier si toutes les cellules sont éteintes
     public boolean cellulesToutesEteintes() {
         for (int i = 0; i < nbLignes; i++) {
-        for (int j = 0; j < nbColonnes; j++) {
-            if (!matriceCellules[i][j].estEteinte()) {
-                return false;  // Si une cellule est allumée, retourne false
+            for (int j = 0; j < nbColonnes; j++) {
+                if (!matriceCellules[i][j].estEteinte()) {
+                    return false;  // Si une cellule est allumée, retourne false
             }
         }
     }

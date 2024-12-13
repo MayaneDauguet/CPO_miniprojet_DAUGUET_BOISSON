@@ -4,8 +4,13 @@
  */
 package lightsofff_dauguet_boisson;
 
+import java.awt.BorderLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 /**
@@ -44,6 +49,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 bouton_ligne.addActionListener(e -> {
                     grille.activerLigneDeCellules(ligne); // Active une ligne de cellules
                     repaint(); // Met à jour l'affichage
+                    verifierVictoire();
                 });
                 PanneauBoutonsVerticaux.add(bouton_ligne); // Ajout du bouton au panneau
             }
@@ -55,6 +61,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                 bouton_colonne.addActionListener(e -> {
                     grille.activerColonneDeCellules(colonne); // Active une colonne de cellules
                     repaint(); // Met à jour l'affichage
+                    verifierVictoire();
                 });
                 PanneauBoutonsHorizontaux.add(bouton_colonne); // Ajout du bouton au panneau
             }
@@ -259,12 +266,14 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.grille.activerDiagonaleDescendante();
         repaint();
+        verifierVictoire();
     }//GEN-LAST:event_btnDiagonale1ActionPerformed
 
     private void btnDiagonale2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiagonale2ActionPerformed
         // TODO add your handling code here:
         this.grille.activerDiagonaleMontante();
         repaint();
+        verifierVictoire();
     }//GEN-LAST:event_btnDiagonale2ActionPerformed
 
     /**
@@ -279,6 +288,13 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         grille.melangerMatriceAleatoirement(5); // Mélanger la grille avec 5 tours par défaut
         System.out.println("La partie est initialisée !");
     }
+    
+    
+    private void verifierVictoire() {
+    if (grille.cellulesToutesEteintes()) {
+        
+    }
+}
 
     /**
      * @param args the command line arguments
