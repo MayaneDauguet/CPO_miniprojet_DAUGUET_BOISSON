@@ -148,7 +148,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel3.setBackground(new java.awt.Color(255, 153, 255));
         jPanel3.setPreferredSize(new java.awt.Dimension(100, 60));
 
         btnDiagonale1.setText("D1");
@@ -163,21 +163,21 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
-                .addComponent(btnDiagonale1)
+                .addContainerGap(12, Short.MAX_VALUE)
+                .addComponent(btnDiagonale1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(btnDiagonale1)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(btnDiagonale1, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        jPanel4.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel4.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 80, 60));
 
-        PanneauBoutonsHorizontaux.setBackground(new java.awt.Color(0, 51, 204));
+        PanneauBoutonsHorizontaux.setBackground(new java.awt.Color(255, 153, 255));
 
         javax.swing.GroupLayout PanneauBoutonsHorizontauxLayout = new javax.swing.GroupLayout(PanneauBoutonsHorizontaux);
         PanneauBoutonsHorizontaux.setLayout(PanneauBoutonsHorizontauxLayout);
@@ -192,7 +192,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         jPanel4.add(PanneauBoutonsHorizontaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 600, 60));
 
-        PanneauBoutonsVerticaux.setBackground(new java.awt.Color(0, 0, 204));
+        PanneauBoutonsVerticaux.setBackground(new java.awt.Color(255, 153, 255));
         PanneauBoutonsVerticaux.setPreferredSize(new java.awt.Dimension(100, 600));
 
         javax.swing.GroupLayout PanneauBoutonsVerticauxLayout = new javax.swing.GroupLayout(PanneauBoutonsVerticaux);
@@ -208,7 +208,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         jPanel4.add(PanneauBoutonsVerticaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 80, 600));
 
-        PanneauGrille.setBackground(new java.awt.Color(255, 204, 255));
+        PanneauGrille.setBackground(new java.awt.Color(0, 153, 204));
 
         javax.swing.GroupLayout PanneauGrilleLayout = new javax.swing.GroupLayout(PanneauGrille);
         PanneauGrille.setLayout(PanneauGrilleLayout);
@@ -223,7 +223,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         jPanel4.add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 600, 600));
 
-        jPanel10.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel10.setBackground(new java.awt.Color(255, 153, 255));
 
         btnDiagonale2.setText("D2");
         btnDiagonale2.addActionListener(new java.awt.event.ActionListener() {
@@ -236,20 +236,19 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
                 .addComponent(btnDiagonale2)
-                .addContainerGap())
+                .addGap(0, 8, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addComponent(btnDiagonale2)
-                .addGap(17, 17, 17))
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnDiagonale2, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        jPanel4.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, -1, 60));
+        jPanel4.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 80, 60));
 
         getContentPane().add(jPanel4, java.awt.BorderLayout.CENTER);
 
