@@ -38,7 +38,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         // Configuration du panneau de boutons verticaux
             PanneauBoutonsVerticaux.setLayout(new GridLayout(TailleGrille, 1));
             for (int a = 0; a < TailleGrille; a++) {
-                JButton bouton_ligne = new JButton("Ligne " + (a + 1));
+                JButton bouton_ligne = new JButton("L " + (a + 1));
                 int ligne = a; // Variable nécessaire pour le listener
                 bouton_ligne.addActionListener(e -> {
                     grille.activerLigneDeCellules(ligne); // Active une ligne de cellules
@@ -50,7 +50,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             PanneauBoutonsVerticaux.repaint();
             PanneauBoutonsHorizontaux.setLayout(new GridLayout(1, TailleGrille));
             for (int b = 0; b < TailleGrille; b++) {
-                JButton bouton_colonne = new JButton("Colonne " + (b + 1));
+                JButton bouton_colonne = new JButton("C " + (b + 1));
                 int colonne = b; // Variable nécessaire pour le listener
                 bouton_colonne.addActionListener(e -> {
                     grille.activerColonneDeCellules(colonne); // Active une colonne de cellules
