@@ -22,7 +22,7 @@ public class Partie {
     // Méthode pour initialiser la partie
     public void initialiserPartie() {
         grille.eteindreToutesLesCellules(); // Éteindre toutes les cellules
-        grille.melangerMatriceAleatoirement(5); // Mélanger la grille avec 5 tours par défaut
+        grille.melangerMatriceAleatoirement(15); // Mélanger la grille avec 5 tours par défaut
         System.out.println("La partie est initialisée !");
     }
 

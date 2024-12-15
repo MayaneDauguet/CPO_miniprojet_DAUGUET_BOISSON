@@ -290,7 +290,9 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             "Victoire", 
             JOptionPane.INFORMATION_MESSAGE);
         initialiserPartie();
+        System.exit(0);
     }
+
 }
 
 
