@@ -9,25 +9,21 @@ package lightsofff_dauguet_boisson;
  * @author Inès
  */
 public class GrilleDeCellules {
-    // Attributs
     private CelluleLumineuse[][] matriceCellules;
     private int nbLignes;
     private int nbColonnes;
 
-    // Constructeur
     public GrilleDeCellules(int p_nbLignes, int p_nbColonnes) {
         this.nbLignes = p_nbLignes;
         this.nbColonnes = p_nbColonnes;
-        // Initialisation de la grille
         this.matriceCellules = new CelluleLumineuse[nbLignes][nbColonnes];
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {
-                matriceCellules[i][j] = new CelluleLumineuse(); // Chaque cellule est éteinte par défaut
+                matriceCellules[i][j] = new CelluleLumineuse();
             }
         }
     }
 
-    // Méthode pour éteindre toutes les cellules
     public void eteindreToutesLesCellules() {
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {
@@ -36,7 +32,6 @@ public class GrilleDeCellules {
         }
     }
 
-    // Méthode pour activer toute une ligne
     public void activerLigneDeCellules(int idLigne) {
         if (idLigne >= 0 && idLigne < nbLignes) {
             for (int j = 0; j < nbColonnes; j++) {
@@ -45,7 +40,6 @@ public class GrilleDeCellules {
         }
     }
 
-    // Méthode pour activer toute une colonne
     public void activerColonneDeCellules(int idColonne) {
         if (idColonne >= 0 && idColonne < nbColonnes) {
             for (int i = 0; i < nbLignes; i++) {
@@ -54,21 +48,18 @@ public class GrilleDeCellules {
         }
     }
 
-    // Méthode pour activer la diagonale descendante
     public void activerDiagonaleDescendante() {
         for (int i = 0; i < Math.min(nbLignes, nbColonnes); i++) {
             matriceCellules[i][i].activerCellule();
         }
     }
 
-    // Méthode pour activer la diagonale montante
     public void activerDiagonaleMontante() {
         for (int i = 0; i < Math.min(nbLignes, nbColonnes); i++) {
             matriceCellules[i][nbColonnes - 1 - i].activerCellule();
         }
     }
 
-    // Méthode pour mélanger la grille aléatoirement
     public void melangerMatriceAleatoirement(int nbTours) {
         for (int i = 0; i < nbTours; i++) {
             int choix = (int) (Math.random() * 4);
@@ -81,7 +72,6 @@ public class GrilleDeCellules {
         }
     }
 
-    // Méthode pour vérifier si toutes les cellules sont éteintes
     public boolean cellulesToutesEteintes() {
         for (int i = 0; i < nbLignes; i++) {
             for (int j = 0; j < nbColonnes; j++) {
@@ -93,7 +83,6 @@ public class GrilleDeCellules {
         return true;
     }
 
-    // Méthode toString pour afficher la grille
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -114,7 +103,6 @@ public class GrilleDeCellules {
         return sb.toString();
     }
 
-    // Getters (si nécessaire pour d'autres fonctionnalités)
     public int getNbLignes() {
         return nbLignes;
     }
@@ -126,5 +114,4 @@ public class GrilleDeCellules {
     public CelluleLumineuse[][] getMatriceCellules() {
         return matriceCellules;
     }
-   
 }

@@ -9,37 +9,30 @@ package lightsofff_dauguet_boisson;
  * @author Inès
  */
 public class CelluleLumineuse {
-    // Attribut
-    private boolean etat; // true si allumée, false si éteinte
+    private boolean etat;
 
-    // Constructeur par défaut
     public CelluleLumineuse() {
-        this.etat = false; // Par défaut, la cellule est éteinte
+        this.etat = false;
     }
 
-    // Méthode pour activer (inverser l'état de la cellule)
     public void activerCellule() {
-        this.etat = !this.etat; // Inverse l'état (true -> false, false -> true)
+        this.etat = !this.etat;
     }
 
-    // Méthode pour éteindre la cellule
     public void eteindreCellule() {
-        this.etat = false; // Force l'état à éteint (false)
+        this.etat = false;
     }
 
-    // Méthode pour vérifier si la cellule est éteinte
     public boolean estEteinte() {
-        return !this.etat; // Renvoie true si éteinte, false sinon
+        return !this.etat;
     }
 
-    // Getter pour l'état de la cellule
     public boolean getEtat() {
-        return this.etat; // Renvoie true si allumée, false si éteinte
+        return this.etat;
     }
 
-    // Méthode toString pour afficher la cellule
     @Override
     public String toString() {
-        return this.etat ? "X" : "O"; // "X" si allumée, "O" si éteinte
+        return this.etat ? "O" : "X";
     }
 }

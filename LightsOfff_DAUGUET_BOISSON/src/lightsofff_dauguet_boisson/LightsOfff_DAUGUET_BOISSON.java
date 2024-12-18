@@ -14,48 +14,38 @@ public class LightsOfff_DAUGUET_BOISSON {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        
-        // 1. Test de la classe CelluleLumineuse
         System.out.println("Test de la classe CelluleLumineuse :");
-        CelluleLumineuse cellule = new CelluleLumineuse();
-        System.out.println("Etat initial de la cellule : " + cellule);  // Doit afficher "O" (cellule éteinte)
-        cellule.activerCellule();
-        System.out.println("Après activation de la cellule : " + cellule);  // Doit afficher "X" (cellule allumée)
-        cellule.eteindreCellule();
-        System.out.println("Après extinction de la cellule : " + cellule);  // Doit afficher "O" (cellule éteinte)
-        System.out.println();
+    CelluleLumineuse cellule = new CelluleLumineuse();
+    System.out.println("Etat initial de la cellule : " + cellule);
+    cellule.activerCellule();
+    System.out.println("Après activation de la cellule : " + cellule);
+    cellule.eteindreCellule();
+    System.out.println("Après extinction de la cellule : " + cellule);
+    System.out.println();
 
-        // 2. Test de la classe GrilleDeCellules
-        System.out.println("Test de la classe GrilleDeCellules :");
-        GrilleDeCellules grille = new GrilleDeCellules(10, 10);  // Grille 10x10
-        System.out.println("Grille initiale :");
-        System.out.println(grille);  // Grille avec toutes les cellules éteintes
+    System.out.println("Test de la classe GrilleDeCellules :");
+    GrilleDeCellules grille = new GrilleDeCellules(10, 10);
+    System.out.println("Grille initiale :");
+    System.out.println(grille);
 
-        // Activer une ligne
-        grille.activerLigneDeCellules(2);
-        System.out.println("Après activation de la ligne 2 :");
-        System.out.println(grille);  // Ligne 2 activée (X)
+    grille.activerLigneDeCellules(2);
+    System.out.println("Après activation de la ligne 2 :");
+    System.out.println(grille);
 
-        // Activer une colonne
-        grille.activerColonneDeCellules(3);
-        System.out.println("Après activation de la colonne 3 :");
-        System.out.println(grille);  // Colonne 3 activée (X)
+    grille.activerColonneDeCellules(3);
+    System.out.println("Après activation de la colonne 3 :");
+    System.out.println(grille);
 
-        // Activer la diagonale descendante
-        grille.activerDiagonaleDescendante();
-        System.out.println("Après activation de la diagonale descendante :");
-        System.out.println(grille);  // Diagonale descendante activée (X)
+    grille.activerDiagonaleDescendante();
+    System.out.println("Après activation de la diagonale descendante :");
+    System.out.println(grille);
 
-        // Vérifier si toutes les cellules sont éteintes
-        System.out.println("Toutes les cellules sont-elles éteintes ? " + grille.cellulesToutesEteintes());
-        System.out.println();
+    System.out.println("Toutes les cellules sont-elles éteintes ? " + grille.cellulesToutesEteintes());
+    System.out.println();
 
-        // 3. Test de la classe Partie
-        System.out.println("Test de la classe Partie :");
-        Partie partie = new Partie(10, 10);  // Partie avec une grille 10x10
-        partie.initialiserPartie();  // Initialisation de la partie (mélange)
-        partie.lancerPartie();  // Lancement de la partie
-    }
-   
+    System.out.println("Test de la classe Partie :");
+    Partie partie = new Partie(10, 10);
+    partie.initialiserPartie();
+    partie.lancerPartie();
+}
 }
