@@ -20,9 +20,9 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     /**
      * Creates new form FenetrePrincipale
      */
-    public FenetrePrincipale() {
+    public FenetrePrincipale(int t) {
         initComponents();
-        int TailleGrille = 10;
+        int TailleGrille = t;
         this.grille = new GrilleDeCellules(TailleGrille, TailleGrille);
         
        //  setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -326,7 +326,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FenetrePrincipale().setVisible(true);
+                new FenetrePrincipale(10).setVisible(true);
             }
         });
     }
