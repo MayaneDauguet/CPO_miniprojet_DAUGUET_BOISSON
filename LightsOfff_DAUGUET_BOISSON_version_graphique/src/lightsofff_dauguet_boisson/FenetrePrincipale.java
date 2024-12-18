@@ -25,23 +25,21 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         int TailleGrille = t;
         this.grille = new GrilleDeCellules(TailleGrille, TailleGrille);
         
-       //  setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-         //   getContentPane().add(PanneauBoutonsVerticaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 1 * 40, nbLignes * 40));
            
         PanneauGrille.setLayout(new GridLayout(TailleGrille, TailleGrille));
         for (int i = 0; i < TailleGrille; i++) {
             for (int j = 0; j < TailleGrille; j++) {
                 CelluleGraphique bouton_cellule = new CelluleGraphique(grille.recupCelluleAvecCoords(i, j), 36, 36);
-                PanneauGrille.add(bouton_cellule); // ajout au Jpanel PanneauGrille
+                PanneauGrille.add(bouton_cellule); 
             }
         }
         // Configuration du panneau de boutons verticaux
             PanneauBoutonsVerticaux.setLayout(new GridLayout(TailleGrille, 1));
             for (int a = 0; a < TailleGrille; a++) {
                 JButton bouton_ligne = new JButton("L " + (a + 1));
-                int ligne = a; // Variable nécessaire pour le listener
+                int ligne = a; 
                 bouton_ligne.addActionListener(e -> {
-                    grille.activerLigneDeCellules(ligne); // Active une ligne de cellules
+                    grille.activerLigneDeCellules(ligne); 
                     repaint(); // Met à jour l'affichage
                     verifierVictoire();
                 });
@@ -51,13 +49,13 @@ public class FenetrePrincipale extends javax.swing.JFrame {
             PanneauBoutonsHorizontaux.setLayout(new GridLayout(1, TailleGrille));
             for (int b = 0; b < TailleGrille; b++) {
                 JButton bouton_colonne = new JButton("C " + (b + 1));
-                int colonne = b; // Variable nécessaire pour le listener
+                int colonne = b; 
                 bouton_colonne.addActionListener(e -> {
-                    grille.activerColonneDeCellules(colonne); // Active une colonne de cellules
-                    repaint(); // Met à jour l'affichage
+                    grille.activerColonneDeCellules(colonne); 
+                    repaint(); // Comme avant ça met a jour l'affichage
                     verifierVictoire();
                 });
-                PanneauBoutonsHorizontaux.add(bouton_colonne); // Ajout du bouton au panneau
+                PanneauBoutonsHorizontaux.add(bouton_colonne); 
             }
             PanneauBoutonsHorizontaux.repaint();
             this.pack();
@@ -277,9 +275,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
     
 
     public void initialiserPartie() {
-        grille.eteindreToutesLesCellules(); // Éteindre toutes les cellules
-        grille.melangerMatriceAleatoirement(5); // Mélanger la grille avec 5 tours par défaut
-        System.out.println("La partie est initialisée !");
+        grille.eteindreToutesLesCellules(); 
+        grille.melangerMatriceAleatoirement(30); 
     }
     
     

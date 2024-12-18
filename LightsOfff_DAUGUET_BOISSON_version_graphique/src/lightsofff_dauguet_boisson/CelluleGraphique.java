@@ -15,38 +15,37 @@ import javax.swing.JButton;
  * @author Inès
  */
 public class CelluleGraphique extends JButton {
-    int largeur; // largeur en pixel de la cellule
-    int hauteur; // hauteur en pixel de la cellule
+    int largeur; 
+    int hauteur; 
     CelluleLumineuse celluleLumineuseAssociee;
 
-    // Constructeur (appelé depuis FenetrePrincipale)
+    
     public CelluleGraphique(CelluleLumineuse celluleLumineuseAssociee, int l, int h) {
         this.largeur = l;
         this.hauteur = h;
         this.celluleLumineuseAssociee = celluleLumineuseAssociee;
-        setPreferredSize(new Dimension(largeur, hauteur)); // Définit la taille de chaque bouton
-        setFocusPainted(false); // Enlève le focus pour une meilleure esthétique
-        setBorderPainted(false); // Enlève les bordures par défaut
+        setPreferredSize(new Dimension(largeur, hauteur)); 
+        setFocusPainted(false); 
+        setBorderPainted(false); 
         setOpaque(true); // Pour que le fond soit coloré
-        updateAppearance(); // Met à jour l'apparence initiale de la cellule
+        updateAppearance(); 
     }
 
-    // Méthode gérant le dessin de la cellule
+    
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        updateAppearance(); // Actualise l'apparence à chaque redessin
+        updateAppearance(); 
     }
 
-    // Méthode pour mettre à jour l'apparence en fonction de l'état de la cellule
+    
     private void updateAppearance() {
-        // Change l'arrière-plan en fonction de l'état de la cellule
         if (celluleLumineuseAssociee.estEteinte()) {
-            setBackground(Color.DARK_GRAY); // Fond sombre pour éteinte (X)
+            setBackground(Color.DARK_GRAY); 
         } else {
-            setBackground(Color.YELLOW); // Fond lumineux pour allumée (O)
+            setBackground(Color.YELLOW); 
         }
 
-        setText(""); // Enlève le texte ("X" ou "O")
+        setText(""); 
     }
 }

@@ -10,23 +10,20 @@ import java.util.Scanner;
  */
 public class Partie {
     // Attributs
-    private GrilleDeCellules grille; // Grille de cellules associée à la partie
-    private int nbCoups;            // Compteur du nombre de coups joués
+    private GrilleDeCellules grille; 
+    private int nbCoups;            
 
-    // Constructeur
     public Partie(int nbLignes, int nbColonnes) {
-        this.grille = new GrilleDeCellules(nbLignes, nbColonnes); // Création de la grille
-        this.nbCoups = 0; // Initialisation du compteur de coups
+        this.grille = new GrilleDeCellules(nbLignes, nbColonnes); 
+        this.nbCoups = 0; 
     }
 
-    // Méthode pour initialiser la partie
     public void initialiserPartie() {
-        grille.eteindreToutesLesCellules(); // Éteindre toutes les cellules
-        grille.melangerMatriceAleatoirement(30); // Mélanger la grille avec 5 tours par défaut
+        grille.eteindreToutesLesCellules();
+        grille.melangerMatriceAleatoirement(30); 
         System.out.println("La partie est initialisée !");
     }
 
-    // Méthode pour lancer la partie
     public void lancerPartie() {
         Scanner scanner = new Scanner(System.in);
 
