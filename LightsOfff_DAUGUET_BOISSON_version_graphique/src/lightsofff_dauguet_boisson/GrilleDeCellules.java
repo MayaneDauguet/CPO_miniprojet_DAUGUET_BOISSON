@@ -75,15 +75,21 @@ public class GrilleDeCellules {
     // Méthode pour mélanger la grille aléatoirement
     public void melangerMatriceAleatoirement(int nbTours) {
         for (int i = 0; i < nbTours; i++) {
-            int choix = (int) (Math.random() * 4);
+            int choix = (int) (Math.random() * 8);
             switch (choix) {
                 case 0 -> activerLigneDeCellules((int) (Math.random() * nbLignes));
                 case 1 -> activerColonneDeCellules((int) (Math.random() * nbColonnes));
                 case 2 -> activerDiagonaleDescendante();
-                case 3 -> activerDiagonaleMontante();
+                case 3 ->  { activerLigneDeCellules((int) (Math.random() * nbColonnes)); activerDiagonaleDescendante(); }
+                case 4 -> { activerLigneDeCellules((int) (Math.random() * nbColonnes)); activerDiagonaleMontante(); }
+                case 5 ->  { activerColonneDeCellules((int) (Math.random() * nbColonnes)); activerDiagonaleDescendante(); }
+                case 6 -> { activerColonneDeCellules((int) (Math.random() * nbColonnes)); activerDiagonaleMontante(); }
+                case 7 -> activerDiagonaleMontante();
             }
         }
     }
+    
+    
 
     // Méthode pour vérifier si toutes les cellules sont éteintes
     public boolean cellulesToutesEteintes() {
