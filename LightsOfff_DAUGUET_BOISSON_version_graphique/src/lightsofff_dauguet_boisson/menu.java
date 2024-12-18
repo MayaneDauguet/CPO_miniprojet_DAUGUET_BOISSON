@@ -35,7 +35,7 @@ public class menu extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 204));
+        setBackground(new java.awt.Color(0, 204, 204));
 
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI Emoji", 0, 14)); // NOI18N
